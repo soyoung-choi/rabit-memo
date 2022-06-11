@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'beanpoleotM00';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/beanpoleotM00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'beanpoleotM00', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 50px;
+}
+
+
+form {
+  margin: 0 auto;
+  width: 500px;
+}
+
+input {
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(28, 28, 28);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}

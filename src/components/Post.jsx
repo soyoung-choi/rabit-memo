@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEraser, faPen } from "@fortawesome/free-solid-svg-icons";
 
 const Post = ({ postObj }) => {
-  const [title, setTitle] = useState("");
-  const [contents, setContents] = useState("");
   const [newTitle, setNewTitle] = useState(postObj.title);
   const [newContents, setNewContents] = useState(postObj.contents);
   const [editing, setEditing] = useState(false);

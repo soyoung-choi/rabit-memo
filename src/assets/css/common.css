@@ -67,6 +67,7 @@ button {
   padding: 15px;
   font-size: 18px;
   font-weight: 800;
+  cursor: pointer;
   border-radius: 5px;
 }
 

@@ -1,14 +1,9 @@
 import { dbService } from "fbase";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 const PostFactory = () => {
   const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
-  const inputRef = useRef();
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -21,8 +16,6 @@ const PostFactory = () => {
 
     setTitle("");
     setContents("");
-
-    inputRef.current.focus();
   };
 
   const onChange = (e) => {
@@ -49,7 +42,7 @@ const PostFactory = () => {
           placeholder="제목"
           onChange={onChange}
           required
-          ref={inputRef}
+          autoFocus
         />
         <label for="contents">내용</label>
         <textarea

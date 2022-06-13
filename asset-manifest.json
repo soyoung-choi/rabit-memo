@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rabit-memo/static/css/main.1b95fdab.css",
+    "main.js": "/rabit-memo/static/js/main.f8118719.js",
+    "static/media/rabbit.png": "/rabit-memo/static/media/rabbit.6d2e6384b21f080a3fe1.png",
+    "index.html": "/rabit-memo/index.html",
+    "main.1b95fdab.css.map": "/rabit-memo/static/css/main.1b95fdab.css.map",
+    "main.f8118719.js.map": "/rabit-memo/static/js/main.f8118719.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b95fdab.css",
+    "static/js/main.f8118719.js"
+  ]
+}

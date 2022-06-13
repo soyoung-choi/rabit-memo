@@ -1,26 +1,23 @@
-@font-face {
-  font-family: 'beanpoleotM00';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/beanpoleotM00.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'beanpoleotM00', sans-serif;
+  font-family: "roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 50px;
 }
 
-
 form {
-  margin: 0 auto;
+  margin: 50px auto;
   width: 500px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
 }
 
 input {
@@ -29,6 +26,12 @@ input {
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #ff6969;
 }
 
 button {
@@ -39,4 +42,18 @@ button {
   padding: 20px;
   font-size: 18px;
   font-weight: normal;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.post-card {
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #f3f4f8;
 }

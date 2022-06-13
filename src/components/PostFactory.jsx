@@ -1,9 +1,14 @@
 import { dbService } from "fbase";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const PostFactory = () => {
   const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -16,6 +21,8 @@ const PostFactory = () => {
 
     setTitle("");
     setContents("");
+
+    inputRef.current.focus();
   };
 
   const onChange = (e) => {
@@ -31,7 +38,7 @@ const PostFactory = () => {
   };
   return (
     <div>
-      <h1>rabit memo</h1>
+      <h1 className="logo">Rabit Memo</h1>
       <form onSubmit={onSubmit}>
         <label for="title">제목</label>
         <input
@@ -41,15 +48,17 @@ const PostFactory = () => {
           value={title}
           placeholder="제목"
           onChange={onChange}
+          required
+          ref={inputRef}
         />
         <label for="contents">내용</label>
-        <input
-          type="text"
+        <textarea
           id="contents"
           name="contents"
           value={contents}
           placeholder="내용"
           onChange={onChange}
+          required
         />
         <button>저장</button>
       </form>

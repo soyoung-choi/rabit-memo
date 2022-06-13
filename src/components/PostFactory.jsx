@@ -31,7 +31,6 @@ const PostFactory = () => {
   };
   return (
     <div>
-      <h1 className="logo">Rabit Memo</h1>
       <form onSubmit={onSubmit}>
         <label for="title">제목</label>
         <input

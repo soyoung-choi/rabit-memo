@@ -4,22 +4,34 @@
 }
 
 body {
+  box-sizing: border-box;
   font-family: "roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 50px;
-  width: 420px;
+  width: 500px;
   margin: 0 auto;
+  background-color: #ffeaea;
+  font-size: 16px;
 }
 
 .logo {
   margin: 0 auto;
-  width: 100%;
+  width: 200px;
+  text-align: center;
+}
+
+.logo .rabbit {
+  width: 100px;
+}
+
+.logo h1 {
   font-size: 36px;
+  margin-top: 10px;
 }
 
 form {
-  margin: 30px auto;
+  margin: 50px auto;
   width: 100%;
 }
 
@@ -30,12 +42,13 @@ label {
 }
 
 input {
-  border: 1px solid #e5e5e5;
+  border: 1px solid white;
   padding: 15px;
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 input:focus {
@@ -43,8 +56,12 @@ input:focus {
   border: 1px solid #ff6969;
 }
 
+input::placeholder {
+  color: #999;
+}
+
 textarea {
-  border: 1px solid #e5e5e5;
+  border: 1px solid white;
   padding: 15px;
   width: 100%;
   margin-bottom: 20px;
@@ -52,11 +69,16 @@ textarea {
   border-radius: 5px;
   height: 180px;
   resize: none;
+  font-size: 16px;
 }
 
 textarea:focus {
   outline: none;
   border: 1px solid #ff6969;
+}
+
+textarea::placeholder {
+  color: #999;
 }
 
 button {
@@ -77,11 +99,11 @@ button {
 }
 
 .post-card {
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
   box-sizing: border-box;
   border-radius: 5px;
-  background: #f3f4f8;
+  background: #fff;
 }
 
 .post-card h3 {
@@ -89,11 +111,28 @@ button {
 }
 
 .post-card .icons {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: right;
 }
 
 .post-card .icons svg {
   margin-left: 20px;
   cursor: pointer;
+}
+
+.post-length {
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.post-length strong {
+  color: #ff6969;
+}
+
+@media (max-width: 420px) {
+  body {
+    width: 100%;
+    padding: 50px 20px;
+  }
 }

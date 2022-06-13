@@ -1,42 +1,42 @@
-import { dbService } from "fbase";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEraser, faPen } from "@fortawesome/free-solid-svg-icons";
+import { dbService } from 'fbase'
+import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEraser, faPen } from '@fortawesome/free-solid-svg-icons'
 
 const Post = ({ postObj }) => {
-  const [newTitle, setNewTitle] = useState(postObj.title);
-  const [newContents, setNewContents] = useState(postObj.contents);
-  const [editing, setEditing] = useState(false);
+  const [newTitle, setNewTitle] = useState(postObj.title)
+  const [newContents, setNewContents] = useState(postObj.contents)
+  const [editing, setEditing] = useState(false)
 
   const toggleEditing = () => {
-    setEditing((prev) => !prev);
-  };
+    setEditing((prev) => !prev)
+  }
 
   const onDeletePost = async () => {
-    await dbService.doc(`posts/${postObj.id}`).delete();
-  };
+    await dbService.doc(`posts/${postObj.id}`).delete()
+  }
 
   const onChange = (e) => {
     const {
       target: { name, value },
-    } = e;
+    } = e
 
-    if (name === "title") {
-      setNewTitle(value);
-    } else if (name === "contents") {
-      setNewContents(value);
+    if (name === 'title') {
+      setNewTitle(value)
+    } else if (name === 'contents') {
+      setNewContents(value)
     }
-  };
+  }
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     await dbService.doc(`posts/${postObj.id}`).update({
       title: newTitle,
       contents: newContents,
-    });
+    })
 
-    setEditing(false);
-  };
+    setEditing(false)
+  }
 
   return (
     <>
@@ -76,7 +76,7 @@ const Post = ({ postObj }) => {
         )}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

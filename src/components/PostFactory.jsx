@@ -1,34 +1,34 @@
-import { dbService } from "fbase";
-import { useState } from "react";
+import { dbService } from 'fbase'
+import { useState } from 'react'
 
 const PostFactory = () => {
-  const [title, setTitle] = useState("");
-  const [contents, setContents] = useState("");
+  const [title, setTitle] = useState('')
+  const [contents, setContents] = useState('')
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    await dbService.collection("posts").add({
+    await dbService.collection('posts').add({
       title: title,
       contents: contents,
       createdAt: Date.now(),
-    });
+    })
 
-    setTitle("");
-    setContents("");
-  };
+    setTitle('')
+    setContents('')
+  }
 
   const onChange = (e) => {
     const {
       target: { name, value },
-    } = e;
+    } = e
 
-    if (name === "title") {
-      setTitle(value);
-    } else if (name === "contents") {
-      setContents(value);
+    if (name === 'title') {
+      setTitle(value)
+    } else if (name === 'contents') {
+      setContents(value)
     }
-  };
+  }
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -55,7 +55,7 @@ const PostFactory = () => {
         <button>저장</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default PostFactory;
+export default PostFactory

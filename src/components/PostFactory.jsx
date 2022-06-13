@@ -33,15 +33,19 @@ const PostFactory = () => {
     <div>
       <h1>rabit memo</h1>
       <form onSubmit={onSubmit}>
+        <label for="title">제목</label>
         <input
           type="text"
+          id="title"
           name="title"
           value={title}
           placeholder="제목"
           onChange={onChange}
         />
+        <label for="contents">내용</label>
         <input
           type="text"
+          id="contents"
           name="contents"
           value={contents}
           placeholder="내용"
